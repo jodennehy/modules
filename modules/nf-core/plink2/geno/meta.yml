@@ -1,12 +1,12 @@
 ---
-name: "plink2_hwe"
+name: "plink2_geno"
 description: Filters plink bfiles or pfiles with maf filters
 keywords:
   - plink2
   - filter
   - samples
   - variants
-  - hwe
+  - geno
   - qualty
 tools:
   - "plink2":
@@ -39,7 +39,7 @@ input:
         type: file
         description: PLINK sample information file or PLINK 2 sample information file
         pattern: "*.{fam,psam}"
-  - - hwe:
+  - - geno:
         type: float
         description: Threshold to use for maf filtering
 
@@ -118,7 +118,6 @@ output:
           description: File containing software versions
           pattern: "versions.yml"
           ontologies: []
-
 
 authors:
   - "@jodennehy"
